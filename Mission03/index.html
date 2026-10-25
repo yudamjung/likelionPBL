@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>버튼 클릭 시 사자 명단이 추가되는 동적 효과</title>
+</head>
+
+<body>
+
+    <div class="menu">
+        <button class="btn_add">아기 사자 추가</button>
+        <button class="delete_lion">마지막 아기 사자 삭제</button>
+        <label>총 <span id="head-count"></span>명</label>
+    </div>
+
+    <form class="new-lion-info">
+        <div class="form-2c">
+            <div class="form-field">
+                <label for="lion-name">이름</label>
+                <input id="lion-name" type="text" placeholder="예: 홍아기사자" required>
+            </div>
+
+            <div class="form-field">
+                <label for="part-name">파트</label>
+                <select id="part-name" name="part-name" required>
+                    <option value="FRONTEND">Frontend</option>
+                    <option value="BACKEND">Backend</option>
+                    <option value="Plan & Design">Plan & Design</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 제출 시 JS가 id로 각 입력값을 읽어 lions 배열에 추가하므로, 모든 입력 요소에 id를 부여하고 label의 for와 연결 -->
+        <label for="lion-tech-stack">관심 기술 (쉼표로 구분)</label>
+        <input id="lion-tech-stack" type="text" placeholder="예: JavaScript, CSS, HTML" required>
+        <label for="lion-catchphrase">한 줄 소개</label>
+        <input id="lion-catchphrase" type="text" placeholder="예: 3주차 DOM 연습 중!" required>
+        <label for="lion-description">자기소개 (상세카드)</label>
+        <textarea id="lion-description" placeholder="예: HTML/CSS로 구조를 만들고, JS로 데이터를 바꾸면 화면이 바뀌는 경험을 하고 있습니다." required></textarea>
+        <div class="form-2c">
+            <div class="form-field">
+                <label for="lion-email">Email</label>
+                <input id="lion-email" type="email" placeholder="예: lion@example.com" required>
+            </div>
+            <div class="form-field">
+                <label for="lion-phone">Phone</label>
+                <input id="lion-phone" type="tel" placeholder="예: 010-1234-5678" required>
+            </div>
+        </div>
+        <label for="lion-web">Web</label>
+        <input id="lion-web" type="url" placeholder="예: https://example.com" required>
+        <div class="form-buttons">
+            <button type="submit">추가하기</button>
+            <button type="button">취소</button>
+        </div>
+    </form>
+
+    <!-- 간단 프로필 카드 영역 -->
+    <div class="card-layout-area">
+    </div>
+
+    <!-- 상세 자기소개 프로필 카드 영역 -->
+    <div class="detail-profile-card-area">
+    </div>
+
+</body>
+
+</html>
